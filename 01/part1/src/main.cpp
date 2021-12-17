@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
     try {
         depths = parseOnePerLine<uint32_t>(inputData);
     } catch (const std::runtime_error &e) {
-        std::cerr << "Could not parse file '" + inputData + "'.\n";
+        std::cerr << e.what() << '\n';
         return 2;
     }
 
