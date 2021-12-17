@@ -8,7 +8,7 @@ template <typename T>
 std::vector<T> parseOnePerLine(const std::string &path) {
     // Open file for read
     std::ifstream ifs(path);
-    if (!ifs) throw std::runtime_error("Could not open file '" + path + "'.\n");
+    if (!ifs) throw std::runtime_error("Could not open file '" + path + "'.");
 
     // Store data into a raw vector
     std::vector<T> raw;
@@ -26,7 +26,7 @@ template <typename T, typename U>
 std::vector<std::pair<T, U>> parseTwoPerLine(const std::string &path) {
     // Open file for read
     std::ifstream ifs(path);
-    if (!ifs) throw std::runtime_error("Could not open file '" + path + "'.\n");
+    if (!ifs) throw std::runtime_error("Could not open file '" + path + "'.");
 
     // Store data into a raw vector of pairs of type T and U
     std::vector<std::pair<T, U>> raw;
