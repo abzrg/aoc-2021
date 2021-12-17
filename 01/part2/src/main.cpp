@@ -16,11 +16,17 @@ int main(int argc, char **argv) {
 
     // Parse the input into a vector of unsigned fixed size integers
     std::string inputData = argv[1];
-    std::vector<uint32_t> depths = parseOnePerLine<uint32_t>(inputData);
-    size_t nMeasurements = depths.size();
+    std::vector<uint32_t> depths;
+    try {
+        depths = parseOnePerLine<uint32_t>(inputData);
+    } catch(const std::runtime_error &e) {
+        std::cerr << e.what() << '\n';
+        return 0;
+    }
 
     // Store sum of each three data into an element within a new vector
     std::vector<uint32_t> groupMeasurementSum;
+    size_t nMeasurements = depths.size();
     for (size_t i = WIDTH_OF_SLIDE - 1; i < nMeasurements; ++i)
         groupMeasurementSum.emplace_back(depths[i] + depths[i - 1] +
                                          depths[i - 2]);
