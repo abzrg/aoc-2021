@@ -28,7 +28,6 @@ CXX_FLAGS += -ggdb3 # Produce debugging information for use by GDB
 					# definitions present in the program)
 CXX_FLAGS += -I../../utils/
 
-
 ###############################################################################
 # Function Definitions                                                        #
 ###############################################################################
@@ -123,7 +122,7 @@ recwildcard=$(wildcard $1$2)\
 ###############################################################################
 
 # Name of the executable
-EXE = sonarsweep1
+EXE = sonarsweep2
 
 # Basic project directories
 BIN = bin/

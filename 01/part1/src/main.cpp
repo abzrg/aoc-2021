@@ -2,7 +2,7 @@
 #include <exception>
 #include <iostream>
 
-#include "utils/utils.h"
+#include "utils.h"
 
 int main(int argc, char **argv) {
     if (argc != 2) {
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     // Indexing starts at 1 because there is no previous measurement for the
     // first measured depth
     size_t nMeasurement = depths.size();
-    for (size_t i = 1; i < nMeasurement ; ++i) {
+    for (size_t i = 1; i < nMeasurement; ++i) {
         uint32_t currMeasurement = depths[i];
         uint32_t prevMeasurement = depths[i - 1];
         if (currMeasurement > prevMeasurement) nDepthIncrease++;
