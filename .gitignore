@@ -1,3 +1,6 @@
 *.d
 *.o
-build/
+**/build/*
+**/bin/*
+**/.cache/*
+
