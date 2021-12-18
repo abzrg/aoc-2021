@@ -1,9 +1,11 @@
+#pragma once
+
 #include <fstream>    // std::ifstream
 #include <stdexcept>  // std::runtime_error
 #include <utility>    // std::pair
 #include <vector>     // std::vector
 
-// Used in day: 1
+namespace utils {
 template <typename T>
 std::vector<T> parseOnePerLine(const std::string &path) {
     // Open file for read
@@ -21,7 +23,6 @@ std::vector<T> parseOnePerLine(const std::string &path) {
     return raw;
 }
 
-// Used in day: 2
 template <typename T, typename U>
 std::vector<std::pair<T, U>> parseTwoPerLine(const std::string &path) {
     // Open file for read
@@ -41,3 +42,5 @@ std::vector<std::pair<T, U>> parseTwoPerLine(const std::string &path) {
 
     return raw;
 }
+
+}  // namespace utils
