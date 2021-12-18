@@ -66,3 +66,8 @@ In this example, there are `7` measurements that are larger than the previous
 measurement.
 
 **How many measurements are larger than the previous measurement?**
+
+<details>
+  <summary>Answer</summary>
+  <code>1298</code>
+</details>
