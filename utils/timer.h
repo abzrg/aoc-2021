@@ -35,7 +35,7 @@ public:
         end = std::chrono::high_resolution_clock::now();
         std::cout << "\n[Summary Total elapsed = "
                   << std::chrono::duration_cast<time_t>(end - start).count()
-                  << unit << "\n\n";
+                  << unit << "]\n\n";
     }
 };
 
