@@ -2,7 +2,8 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "utils.h"
+#include "utils/parser.h"
+#include "utils/timer.h"
 
 struct Position {
     uint32_t x;  // horizontal position       (→ +)
@@ -11,6 +12,8 @@ struct Position {
 };
 
 int main(int argc, char **argv) {
+    auto timer = utils::Timer();
+
     if (argc != 2) {
         std::cerr << "Usage: dive1 INPUTFILE\n";
         return 1;
@@ -23,7 +26,7 @@ int main(int argc, char **argv) {
     //   - a magnitude
     std::vector<std::pair<std::string, uint32_t>> course;
     try {
-        course = parseTwoPerLine<std::string, uint32_t>(argv[1]);
+        course = utils::parseTwoPerLine<std::string, uint32_t>(argv[1]);
     } catch (const std::runtime_error &e) {
         std::cerr << e.what() << '\n';
         return 1;

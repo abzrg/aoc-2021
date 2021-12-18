@@ -26,7 +26,7 @@ CXX_FLAGS += -O0 # Disable Optimizations
 CXX_FLAGS += -ggdb3 # Produce debugging information for use by GDB
 					# (Level 3 includes extra information, such as all the macro
 					# definitions present in the program)
-CXX_FLAGS += -I../../utils/
+CXX_FLAGS += -I../../
 
 ###############################################################################
 # Function Definitions                                                        #

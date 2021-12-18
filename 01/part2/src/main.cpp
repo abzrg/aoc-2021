@@ -3,11 +3,14 @@
 #include <string>
 #include <vector>
 
-#include "utils.h"
+#include "utils/parser.h"
+#include "utils/timer.h"
 
 #define WIDTH_OF_SLIDE 3ULL
 
 int main(int argc, char **argv) {
+    auto timer = utils::Timer();
+
     // Check for user input
     if (argc != 2) {
         std::cerr << "Usage: sonarsweep2 INPUTFILE\n";
@@ -18,8 +21,8 @@ int main(int argc, char **argv) {
     std::string inputData = argv[1];
     std::vector<uint32_t> depths;
     try {
-        depths = parseOnePerLine<uint32_t>(inputData);
-    } catch(const std::runtime_error &e) {
+        depths = utils::parseOnePerLine<uint32_t>(inputData);
+    } catch (const std::runtime_error &e) {
         std::cerr << e.what() << '\n';
         return 0;
     }

@@ -9,7 +9,7 @@ CXX_FLAGS += -stdlib=libstdc++
 CXX_FLAGS += -pipe
 CXX_FLAGS += -O0
 CXX_FLAGS += -ggdb3
-CXX_FLAGS += -I../../utils/
+CXX_FLAGS += -I../../
 
 # Recursive function for collecting all the source files
 recwildcard=$(wildcard $1$2)\
