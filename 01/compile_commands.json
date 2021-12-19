@@ -1,0 +1,25 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-pedantic",
+      "-Wall",
+      "-Wextra",
+      "-stdlib=libstdc++",
+      "-Ofast",
+      "-march=native",
+      "-Wno-unknown-warning-option",
+      "-Qunused-arguments",
+      "-pipe",
+      "-I../include",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.cpp"
+    ],
+    "directory": "/home/ali/repos/aoc-2021/01",
+    "file": "/home/ali/repos/aoc-2021/01/src/main.cpp",
+    "output": "/home/ali/repos/aoc-2021/01/obj/main.o"
+  }
+]
