@@ -57,7 +57,7 @@ mem-check: all
 
 .PHONY: benchmark
 benchmark: all
-	@../benchmark.sh $(BIN)$(EXE)
+	@../tools/benchmark.sh $(BIN)$(EXE)
 
 .PHONY: format
 format:
