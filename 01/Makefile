@@ -12,7 +12,7 @@ CXX_FLAGS += -march=native
 CXX_FLAGS += -Wno-unknown-warning-option
 CXX_FLAGS += -Qunused-arguments
 CXX_FLAGS += -pipe
-CXX_FLAGS += -I.. # look for headers in utils/
+CXX_FLAGS += -I../include # look for headers in utils/
 
 recwildcard=$(wildcard $1$2)\
 			$(foreach d,$(wildcard $1*),$(call recwildcard,$d/,$2))

@@ -12,7 +12,7 @@
       "-Wno-unknown-warning-option",
       "-Qunused-arguments",
       "-pipe",
-      "-I..",
+      "-I../include",
       "-c",
       "-o",
       "obj/main.o",
