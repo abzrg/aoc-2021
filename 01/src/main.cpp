@@ -48,8 +48,8 @@ static uint32_t problem1(const std::string& file) {
     return nDepthIncrease;
 }
 
+// Problem 2
 #define WINDOW_LENGTH 3ULL
-
 static uint32_t problem2(const std::string& file) {
     // Read input file and buffer it
     std::vector<uint32_t> depths;

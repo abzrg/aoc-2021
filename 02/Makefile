@@ -1,4 +1,5 @@
 CXX = clang++
+
 CXX_FLAGS = -std=c++17
 CXX_FLAGS += -pedantic
 CXX_FLAGS += -Wall
@@ -6,16 +7,17 @@ CXX_FLAGS += -Wextra
 CXX_FLAGS += -MMD
 CXX_FLAGS += -MP
 CXX_FLAGS += -stdlib=libstdc++
+CXX_FLAGS += -Ofast
+CXX_FLAGS += -march=native
+CXX_FLAGS += -Wno-unknown-warning-option
+CXX_FLAGS += -Qunused-arguments
 CXX_FLAGS += -pipe
-CXX_FLAGS += -O0
-CXX_FLAGS += -ggdb3
-CXX_FLAGS += -I../../
+CXX_FLAGS += -I../ # look for headers in utils/
 
-# Recursive function for collecting all the source files
 recwildcard=$(wildcard $1$2)\
 			$(foreach d,$(wildcard $1*),$(call recwildcard,$d/,$2))
 
-EXE = dive1
+EXE = day02
 BIN = bin/
 OBJDIR = obj/
 DOC = doc/
@@ -26,9 +28,7 @@ OBJ = $(addprefix\
 	  $(OBJDIR),$(notdir $(patsubst %.cpp,%.o,$(call recwildcard,src/,*.cpp))))
 DEP = $(OBJ:.o=.d)
 
-
-# Rules ----
-
+# Rules
 .PHONY: all
 all: $(OBJDIR) $(BIN) $(BIN)$(EXE)
 
@@ -46,6 +46,14 @@ $(BIN)$(EXE): $(OBJ)
 
 $(OBJDIR)%.o: %.cpp
 	$(CXX) $(CXX_FLAGS) -c $< -o $@
+
+.PHONY: run
+run:
+	@$(BIN)$(EXE)
+
+.PHONY: mem-check
+mem-check:
+	valgrind $(BIN)$(EXE)
 
 .PHONY: format
 format:
