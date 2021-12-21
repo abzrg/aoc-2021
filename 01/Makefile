@@ -48,15 +48,15 @@ $(OBJDIR)%.o: %.cpp
 	$(CXX) $(CXX_FLAGS) -c $< -o $@
 
 .PHONY: run
-run: all
+run: | all
 	@$(BIN)$(EXE)
 
 .PHONY: mem-check
-mem-check: all
+mem-check: | all
 	@valgrind $(BIN)$(EXE)
 
 .PHONY: benchmark
-benchmark: all
+benchmark: | all
 	@../tools/benchmark.sh $(BIN)$(EXE)
 
 .PHONY: format
