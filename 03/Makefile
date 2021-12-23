@@ -17,7 +17,7 @@ CXX_FLAGS += -I../include # look for headers in utils/
 recwildcard=$(wildcard $1$2)\
 			$(foreach d,$(wildcard $1*),$(call recwildcard,$d/,$2))
 
-EXE = day02
+EXE = day03
 BIN = bin/
 OBJDIR = obj/
 DOC = doc/

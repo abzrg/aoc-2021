@@ -2,7 +2,7 @@
 
 # 🎅🎄 Advent of Code 2021 ☃️❄️
 
-![](https://img.shields.io/badge/stars%20⭐-4-gold.svg)
+![](https://img.shields.io/badge/stars%20⭐-6-gold.svg)
 
 ![Last commit](https://img.shields.io/github/last-commit/reverseila/aoc-2021)
 [![GitHub license](https://img.shields.io/github/license/reverseila/aoc-2021?color=blue)](https://github.com/reverseila/aoc-2021/blob/main/LICENSE)
@@ -51,6 +51,7 @@ each program 100 times and extract the fastest execution time, per the script
 | :---------------------: | :-------------------------- | -----------: | -------: | :----------------------------------- |
 | [`01`](01/src/main.cpp) | **Sonar Sweep**             |          501 |   137 kB | `██`                                 |
 | [`02`](02/src/main.cpp) | **Dive!**                   |          551 |   249 kB | `██`                                 |
+| [`03`](03/src/main.cpp) | **Binary Diagnostic!**      |          607 |   145 kB | `███`                                |
 
 
 ## Scoreboard
@@ -58,6 +59,7 @@ each program 100 times and extract the fastest execution time, per the script
 ```
       --------Part 1---------   --------Part 2---------
 Day       Time    Rank  Score       Time    Rank  Score
+  3       >24h  150409      0       >24h  120626      0
   2       >24h  166610      0       >24h  161935      0
   1       >24h  198590      0       >24h  179292      0
 ```
